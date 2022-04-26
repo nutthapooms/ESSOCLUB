@@ -1,0 +1,66 @@
+<div *ngIf="loading" class="overlay">
+    <h2>Loading</h2>
+</div>
+<div class=" ">
+
+    <!-- end em-l-grid__item -->
+    <div class="em-l-container">
+        <button *ngIf="ClubType == 'Social'" class="em-c-btn em-c-btn_card" (click)="changetoSport()">
+            <span class="em-c-btn__text">Sports Club</span>
+        </button>
+        <button *ngIf="ClubType == 'Sport'" class="em-c-btn em-c-btn_card2" (click)="changetoSport()">
+            <span class="em-c-btn__text">Sports Club</span>
+        </button>
+        <button *ngIf="ClubType == 'Sport'" class="em-c-btn em-c-btn_card" (click)="changetoSocial()">
+            <span class="em-c-btn__text">Social Club</span>
+        </button>
+
+        <button *ngIf="ClubType == 'Social'" class="em-c-btn em-c-btn_card2" (click)="changetoSocial()">
+            <span class="em-c-btn__text">Social Club</span>
+        </button>
+        <ul class="em-c-icon-card-list em-l-grid em-l-grid--2up ">
+            <li class="em-c-icon-card-list__item em-l-grid__item" *ngFor="let Club of filterItemsOfClub()">
+
+                <div class="em-c-card ">
+                    <div class="em-c-card__body">
+                        <div class="em-c-media-block em-c-media-block--small">
+                            <div class="em-c-media-block__media addShadow">
+                                <img src={{Club.PictureUrl}} alt="Alt Text" class="em-c-media-block__img" style="margin:auto;" />
+                            </div>
+                            <!-- end em-c-media-block__media -->
+                            <div class="em-c-media-block__body">
+                                <table>
+                                    <td>
+                                        <h2 class="em-c-media-block__headline " style="font-size: 40px;">
+                                            {{Club.value.Title}}
+                                        </h2>
+                                        <p class="em-c-media-block__desc" style="font-size: 20px;">Club Chairperson: {{Club.value.President}}
+                                        </p>
+
+                                        <p class="em-c-media-block__desc" style="font-size: 20px;">
+                                            {{Club.value.Description}}</p>
+                                        <!-- end em-c-status-->
+                                    </td>
+                                    <td>
+                                        <img src={{Club.QR}} alt="Alt Text" class="em-c-media-block__img" style="width: 100px;height: auto;margin-bottom: -30%; margin-right: 0; margin-left: auto; display:block;" />
+
+                                    </td>
+                                </table>
+
+                            </div>
+                            <!-- end em-c-media-block__body -->
+                        </div>
+                        <!-- end em-c-media-block -->
+                    </div>
+                    <!-- end em-c-card__body -->
+
+                    <!-- end em-c-card__footer -->
+                </div>
+                <!-- end em-c-card -->
+            </li>
+        </ul>
+        <!-- end em-l-grid__item -->
+    </div>
+    <!-- end em-c-figure -->
+    <!-- End main-->
+</div>

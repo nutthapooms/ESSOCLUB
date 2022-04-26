@@ -1,0 +1,103 @@
+<div *ngIf="loading" class="overlay">
+  <!-- <img src="https://ishareteam4.na.xom.com/sites/THAAreaOps/CusEng/ITFairOnline2/Picture%20Hub/loading.gif" alt=""  width="250px"/> -->
+  <h2>Loading</h2>
+</div><!-- 'fpo' stands for 'for placement only'. Replace the 'fpo-block' div element with your own markup-->
+<div class="em-l-container">
+<table>
+  <tr>
+    <td>
+      <!--end em-c-table-object__body-->
+      <div class="em-c-table-object__body"> 
+        <div class="em-c-table-object__body-inner">
+          <table class="em-c-table ">
+            <thead class="em-c-table__header">
+              <tr class="em-c-table__header-row">
+                <th scope="col" class="em-c-table__header-cell ">VCode</th>
+                <th scope="col" class="em-c-table__header-cell ">Redeem date</th>
+                <!-- <th scope="col" class="em-c-table__header-cell ">Created By</th> -->
+
+              </tr>
+              <!-- em-c-table__header-row -->
+            </thead>
+            <!-- end em-c-table__header -->
+            <tbody class="em-c-table__body ">
+              <tr class="em-c-table__row "*ngFor="let history of transactionsHistory" >
+                <td class="em-c-table__cell em-js-cell em-js-cell-editable" colspan="" >
+                  {{history.EventOrPrice}}
+                </td>
+                <td class="em-c-table__cell em-js-cell em-js-cell-editable" colspan="" >
+                  {{history.Created}}
+
+                </td>
+                <!-- <td class="em-c-table__cell em-js-cell em-js-cell-editable" colspan="">
+                              {{leader.creator2}}
+                          </td> -->
+              </tr>
+              <!-- end em-c-table__row -->
+
+              <!-- end em-c-table__row -->
+            </tbody>
+            <!-- end em-c-table__body -->
+            <tfoot class="em-c-table__footer">
+              <tr class="em-c-table__footer-row">
+              </tr>
+            </tfoot>
+            <!-- end em-c-table__footer -->
+          </table>
+          <!--end em-c-table-->
+        </div>
+        <!--end em-c-table-object__body-inner-->
+      </div>
+      <!--end em-c-table-object__body-->
+    </td>
+    <td>
+      <!--end em-c-table-object__body-->
+      <div class="em-c-table-object__body"> 
+        <div class="em-c-table-object__body-inner">
+          <table class="em-c-table ">
+            <thead class="em-c-table__header">
+              <tr class="em-c-table__header-row">
+                <th scope="col" class="em-c-table__header-cell ">Item</th>
+                <th scope="col" class="em-c-table__header-cell ">Unit</th>
+                <!-- <th scope="col" class="em-c-table__header-cell ">Created By</th> -->
+
+              </tr>
+              <!-- em-c-table__header-row -->
+            </thead>
+            <!-- end em-c-table__header -->
+            <tbody class="em-c-table__body ">
+              <tr class="em-c-table__row "*ngFor="let transaction of transactions" >
+                <td class="em-c-table__cell em-js-cell em-js-cell-editable" colspan="">
+                  {{transaction.EventOrPrice}}
+                </td>
+                <td class="em-c-table__cell em-js-cell em-js-cell-editable" colspan="">
+                  {{transaction.Unit}}
+
+                </td>
+                <!-- <td class="em-c-table__cell em-js-cell em-js-cell-editable" colspan="">
+                              {{leader.creator2}}
+                          </td> -->
+              </tr>
+              <!-- end em-c-table__row -->
+
+              <!-- end em-c-table__row -->
+            </tbody>
+            <!-- end em-c-table__body -->
+            <tfoot class="em-c-table__footer">
+              <tr class="em-c-table__footer-row">
+              </tr>
+            </tfoot>
+            <!-- end em-c-table__footer -->
+          </table>
+          <!--end em-c-table-->
+        </div>
+        <!--end em-c-table-object__body-inner-->
+      </div>
+      <!--end em-c-table-object__body-->
+    </td>
+  </tr>
+  
+</table>
+</div>
+
+<!-- end em-l__main -->

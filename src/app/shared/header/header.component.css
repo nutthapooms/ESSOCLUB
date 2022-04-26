@@ -1,0 +1,14 @@
+.em-c-header {
+    background: rgb(122, 0, 0);
+    padding-top: 1.5%;
+    padding-bottom: 2%;
+    /* transform: scale(1, 1.9); */
+}
+
+.em-c-header__title-container {
+    transform: scale(1.9, 1.9);
+}
+
+.em-c-primary-nav {
+    transform: scale(2.1, 2.1);
+}

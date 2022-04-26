@@ -1,0 +1,70 @@
+<div class="em-l-container">
+
+    <div class="em-c-field ">
+        <label for="" class="em-c-field__label">Event name</label>
+        <div class="em-c-field__body">
+            <input type="" id="eventName" class="em-c-input em-js-input" placeholder="Event name" value="" />
+        </div>
+        <!-- end em-c-field__body -->
+        <div class="em-c-field__note">system will check your event name</div>
+    </div>
+    <!-- end em-c-field -->
+    
+    <div class="em-c-field ">
+        <label for="" class="em-c-field__label">Event Description</label>
+        <div class="em-c-field__body">
+            <input type="" id="eventDescription" class="em-c-input em-js-input" placeholder="Desciption" value="" />
+        </div>
+        <!-- end em-c-field__body -->
+    </div>
+    <!-- end em-c-field -->
+    <div class="em-c-field ">
+        <label for="" class="em-c-field__label">Url</label>
+        <div class="em-c-field__body">
+            <input type="" id="eventUrl" class="em-c-input em-js-input" placeholder="eg. https://eventx.exxonmobil.com" value="" />
+        </div>
+        <!-- end em-c-field__body -->
+        <div class="em-c-field__note">input a register page url</div>
+    </div>
+    <!-- end em-c-field -->
+    <div class="em-c-field ">
+        <label for="" class="em-c-field__label">Event code</label>
+        <div class="em-c-field__body">
+            <input type="" id="eventCode" class="em-c-input em-js-input" placeholder="Event code" value="" />
+        </div>
+        <!-- end em-c-field__body -->
+        <div class="em-c-field__note">system will check your event code</div>
+    </div>
+    <!-- end em-c-field -->
+    <div class="em-c-field ">
+        <label for="" class="em-c-field__label">V-coins per code</label>
+        <div class="em-c-field__body">
+          <select class="em-c-select em-c-select" id="codeEarning" placeholder="please select">
+            <optgroup label="Option Group">
+              <option value="100">100</option>
+              <option value="200">200</option>
+              <option value="200">300</option>
+
+            </optgroup>
+          </select>
+        </div>
+        <!-- end em-c-field__body -->
+      </div>
+      <!-- end em-c-field -->
+      <div class="em-c-field ">
+        <label for="" class="em-c-field__label">Code limit</label>
+        <div class="em-c-field__body">
+            <input type="" id="codeLimit" class="em-c-input em-js-input" placeholder="number of code" value="" />
+        </div>
+        <!-- end em-c-field__body -->
+    </div>
+    <!-- end em-c-field -->
+    <button id="submitBTN" class="em-c-btn " (click) = "submit()">
+        <span class="em-c-btn__text">Submit your Event</span>
+        
+      </button>
+      <button id="cancelBTN" class="em-c-btn " (click) = "return()">
+        <span class="em-c-btn__text">Cancel</span>
+        
+      </button>
+</div>

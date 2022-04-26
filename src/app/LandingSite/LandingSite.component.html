@@ -1,0 +1,98 @@
+<div *ngIf="loading" class="overlay">
+    <h2>Loading</h2>
+</div>
+
+<div class="em-l-grid em-l-grid--2up ">
+    <div class="em-l-grid__item em-l-grid__item_left ">
+        <div class="PagePics">
+            <img src={{imagePath}} />
+        </div>
+
+    </div>
+    <div class="em-l-grid__item em-l-grid__item_right">
+
+        <div class="em-l-container-right" style="padding-right: 20%; text-align: right ;">
+            <div class="right-component">
+                <h2 class="" style="font-size: 120px;">Our Vision</h2>
+                <div style="text-align: right; font-size: 30px;" [innerHTML]="vision"></div>
+                <div style="align-content: right; padding-top: 15%;">
+                    <button class="em-c-btn em-c-btn_card" (click)="scrollDown()" style="align-self: right; font-size: 35px; padding: 7%;">
+                        <span class="em-c-btn__text">Find out more</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="em-l-container">
+    <h2>Esso Club Committee</h2>
+    <ul class="em-c-icon-card-list em-l-grid em-l-grid--2up ">
+        <li class="em-c-icon-card-list__item em-l-grid__item" *ngFor="let committee of Committees">
+
+            <div class="em-c-card ">
+                <div class="em-c-card__body">
+                    <h3 class=" " style="font-size: 30px;margin:3%;">
+                        {{committee.value.Title}}
+                    </h3>
+                    <div class="em-c-media-block em-c-media-block--small">
+
+                        <div class="em-c-media-block__media">
+                            <img src={{committee.PictureUrl}} alt="Alt Text" class="em-c-media-block__img" />
+                        </div>
+                        <!-- end em-c-media-block__media -->
+                        <div class="em-c-media-block__body">
+                            <h2 class="em-c-media-block__headline " style="font-size: 25px;">
+                                {{committee.value.Name}}
+                            </h2>
+                            <!-- <p class="em-c-media-block__desc">{{challenge.value.EventDate}}</p> -->
+                            <p class="em-c-media-block__desc" style="font-size: 25px;">{{committee.value.Role}}</p>
+
+                            <!-- end em-c-status-->
+                        </div>
+                        <!-- end em-c-media-block__body -->
+                    </div>
+                </div>
+
+
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="em-l-container">
+    <div class="em-l-grid em-l-grid--2up ">
+        <div class="em-l-grid__item em-l-grid__item_left " style="margin-top: 7%;">
+            <div class="">
+                <h2 class="" style="color:rgb(122,0,0) ;font-size: 60px;">Our Objective</h2>
+                <br>
+                <div style="font-size: 30px;" [innerHTML]="objective">
+
+                </div>
+                <br>
+                <div>
+                    <button class="em-c-btn em-c-btn_card" (click)="navigateClubs()" style="margin-top:10px; font-size: 35px; padding: 5%;">
+                        <span  class=" em-c-btn__text ">Browse all Our clubs</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- end em-l-grid__item -->
+        <div class="em-l-grid__item em-l-grid__item_right ">
+            <img src="https://ishareteam1.na.xom.com/sites/BKKBSCERGO/BKKESSOCLUB/Picture%20Hub/Landing2.png " alt=" " style="width: 100%;height: 100%; ">
+        </div>
+
+
+
+    </div>
+
+</div>
+<!-- end em-l-grid__item -->
+
+<!-- </div> -->
+<!-- end em-c-figure -->
+<!-- End main-->
